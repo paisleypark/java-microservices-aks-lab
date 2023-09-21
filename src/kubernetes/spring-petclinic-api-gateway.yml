@@ -15,7 +15,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - image: c00000acrg01.azurecr.io/spring-petclinic-api-gateway:3.0.2
+      - image: #image#
         name: api-gateway
         env:
         - name: "CONFIG_SERVER_URL"
