@@ -28,7 +28,7 @@ spec:
           failureThreshold: 3
           httpGet:
             path: /actuator/health
-            port: 9090
+            port: 8080
             scheme: HTTP
           initialDelaySeconds: 180
           successThreshold: 1
@@ -36,12 +36,12 @@ spec:
           failureThreshold: 3
           httpGet:
             path: /actuator/health
-            port: 9090
+            port: 8080
             scheme: HTTP
           initialDelaySeconds: 10
           successThreshold: 1
         ports:
-        - containerPort: 9090
+        - containerPort: 8080
           name: http
           protocol: TCP
         - containerPort: 9779
@@ -63,9 +63,9 @@ metadata:
   name: customers-service
 spec:
   ports:
-  - port: 9090
+  - port: 8080
     protocol: TCP
-    targetPort: 9090
+    targetPort: 8080
   selector:
     app: customers-service
   type: ClusterIP
